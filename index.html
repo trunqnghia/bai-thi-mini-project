@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini-project Bài 1 - Website Học Tập</title>
+  <style>
+    /* Reset cơ bản và font chữ */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
 
+    /* Container căn giữa toàn bộ trang web */
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    /* 1. HEADER */
+    header {
+      background-color: #1e3a8a;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 5px 0 0 0; font-size: 14px; opacity: 0.9; }
+
+    /* 2. NAV */
+    nav {
+      background-color: #3b82f6;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      background-color: #1d4ed8;
+      border-radius: 6px;
+    }
+
+    /* 3. MAIN (Bao bọc các Section bên trong) */
+    main {
+      background-color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    /* Định dạng chung cho các Section bên trong Main */
+    section {
+      background-color: #fafafa;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 15px;
+    }
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+    section h2 {
+      margin-top: 0;
+      color: #1e3a8a;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 5px;
+    }
+
+    /* Định dạng Bảng (Table) ở Section 1 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    table th, table td {
+      border: 1px solid #d1d5db;
+      padding: 12px;
+      text-align: left;
+    }
+    table th {
+      background-color: #f3f4f6;
+      color: #1e3a8a;
+    }
+    table tr:nth-child(even) {
+      background-color: #f9fafb;
+    }
+
+    /* Định dạng Biểu mẫu (Form) ở Section 2 */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="url"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    /* 4. FOOTER */
+    footer {
+      background-color: #1f2937;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Học Lập Trình Web Mỗi Ngày</h1>
+      <p>Khóa học HTML5 & CSS3 Cơ Bản - Bài Tập Thực Hành</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#tiendo">Tiến độ học tập</a></li>
+        <li><a href="#nopbai">Nộp bài tập</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      <section id="tiendo">
+        <h2>SECTION 1: Nội Dung & Tiến Độ Học Tập</h2>
+        <p>Dưới đây là danh sách các bài học cần hoàn thành trong tuần này:</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Mã Bài</th>
+              <th>Tên Bài Học</th>
+              <th>Thời Lượng</th>
+              <th>Trạng Thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HTML-01</td>
+              <td>Bài 1: Tổng quan và dựng bố cục Semantic HTML5</td>
+              <td>45 phút</td>
+              <td style="color: #2563eb; font-weight: bold;">Đang học</td>
+            </tr>
+            <tr>
+              <td>HTML-02</td>
+              <td>Bài 2: Làm việc với văn bản và liên kết bài viết</td>
+              <td>30 phút</td>
+              <td>Chưa mở</td>
+            </tr>
+            <tr>
+              <td>HTML-03</td>
+              <td>Bài 3: Cách tạo Biểu mẫu (Form) và Bảng dữ liệu (Table)</td>
+              <td>60 phút</td>
+              <td>Chưa mở</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="nopbai">
+        <h2>SECTION 2: Nộp Sản Phẩm Mini-Project</h2>
+        <p>Học viên vui lòng điền đầy đủ thông tin và dán đường link GitHub repository bài làm vào đây:</p>
+        
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="student-name">Họ và tên học viên:</label>
+            <input type="text" id="student-name" name="student-name" placeholder="Nhập họ và tên của bạn" required>
+          </div>
+
+          <div class="form-group">
+            <label for="github-link">Link GitHub Repository:</label>
+            <input type="url" id="github-link" name="github-link" placeholder="Ví dụ: https://github.com/username/ten-repo" required>
+          </div>
+
+          <button type="submit">Gửi bài làm</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Website Học Tập. Được thiết kế bởi Nguyễn Trung Nghĩa.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
